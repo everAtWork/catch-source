@@ -9,6 +9,7 @@
   "dependencies": {
     "autoprefixer-stylus": "0.14.0",
     "firebase": "^7.6.0",
+    "gh-pages": "^3.1.0",
     "prop-types": "^15.6.0",
     "re-base": "4.0.0",
     "react": "^16.6.3",
@@ -18,6 +19,7 @@
     "serve": "^10.1.2",
     "stylus": "0.54.5"
   },
+  "homepage": "https://everatwork.github.io/cotd",
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",
@@ -26,7 +28,9 @@
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "now-build": "npm run build && mv build dist",
-    "styles:watch": "npm run styles -- -w"
+    "styles:watch": "npm run styles -- -w",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
